@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Pascal Triangle."""
 
 
@@ -11,11 +12,7 @@ def generate_next_row(prev_row: list[int]) -> list[int]:
     Return:
         list[int]: The next row of Pascal's triangle.
     """
-    return (
-        [1]
-        + [prev_row[i] + prev_row[i + 1] for i in range(len(prev_row) - 1)]
-        + [1]
-    )
+    return [1] + [prev_row[i] + prev_row[i + 1] for i in range(len(prev_row) - 1)] + [1]
 
 
 def pascal_triangle(n: int) -> list[list[int]]:
