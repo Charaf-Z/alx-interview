@@ -13,7 +13,7 @@ def canUnlockAll(boxes):
     Returns:
         bool: True if all boxes can be opened, False otherwise.
     """
-    if not boxes or isinstance(boxes, list):
+    if not boxes or type(boxes) is not list:
         return False
     keys = [0]
     for key in keys:
