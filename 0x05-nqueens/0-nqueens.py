@@ -30,9 +30,9 @@ def queens(n, row=0, columns=[], diag1=[], diag2=[]):
     else:
         for col in range(n):
             if (
-                col not in columns
-                and (row + col) not in diag1
-                and (row - col) not in diag2
+                col not in columns and
+                (row + col) not in diag1 and
+                (row - col) not in diag2
             ):
                 yield from queens(
                     n,
