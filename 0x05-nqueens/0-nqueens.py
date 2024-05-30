@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 """N Queens module helper."""
 
-from sys import argv
+import sys
 
 
 def validate_args():
     """Validate the given argument."""
-    if len(argv) != 2:
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
         exit(1)
 
-    if not argv[1].isdigit():
+    if not sys.argv[1].isdigit():
         print("N must be a number")
         exit(1)
 
-    nbr = int(argv[1])
+    nbr = int(sys.argv[1])
 
     if nbr < 4:
         print("N must be at least 4")
