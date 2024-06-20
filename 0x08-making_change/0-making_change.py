@@ -20,15 +20,13 @@ def makeChange(coins, total):
     if total <= 0:
         return 0
 
-    # Initialize the dp array with the largest value.
-    min_coins = [float("inf")] * (total + 1)
-    min_coins[0] = 0  # Base case
+    num_coins = 0
+    sorted_coins = sorted(coins, reverse=True)
 
-    for coin in coins:
-        for amount in range(coin, total + 1):
-            if min_coins[amount - coin] != float("inf"):
-                min_coins[amount] = min(
-                    min_coins[amount], min_coins[amount - coin] + 1
-                )
-
-    return min_coins[total] if min_coins[total] != float("inf") else -1
+    for coin in sorted_coins:
+        while total >= coin:
+            total -= coin
+            num_coins += 1
+        if total == 0:
+            return num_coins
+    return -1
