@@ -1,0 +1,15 @@
+{
+  "name": "0x06-starwars_api",
+  "version": "1.0.0",
+  "description": "## Task",
+  "main": "0-starwars_characters.js",
+  "scripts": {
+    "test": "semistandard --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "semistandard": "^17.0.0"
+  }
+}
